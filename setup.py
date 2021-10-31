@@ -9,7 +9,7 @@ setup(name='easylogging',
       license='GNU GPLv3',
       packages=find_packages(),
       install_requires=[
-      "wheel>=0.35.1",      
+            
       ],
       classifiers=['Programming Language :: Python :: 3'],
       zip_safe=False)
