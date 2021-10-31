@@ -1,9 +1,8 @@
 import logging
 import sys
-import zmq.log.handlers
 
 class loggerClass():
-	def __init__(self, name = 'root', logging_level = 'info', file_logging = False, file_logging_level = 'debug', zmq_logging = False, zmq_port = 1003):
+	def __init__(self, name = 'root', logging_level = 'info', file_logging = False, file_logging_level = 'debug'):
 		self.name = name
 		self.logger = logging.getLogger(name)
 
@@ -56,10 +55,6 @@ class loggerClass():
 			fh.setFormatter(formatter)
 			# add the handlers to the logge
 			self.logger.addHandler(fh)
-		if zmq_logging and not [True for x in self.logger.handlers if x.__class__ == zmq.log.handlers.PUBHandlerr]:
-			handler = zmq.log.handlers.PUBHandler('tcp://*:' + str(1103))
-			handler.root_topic = self.name
-			self.logger.addHandler(handler)
 		self.logger.setLevel(logging_level)
 	def debug(self, msg):
 		self.logger.debug(msg)
