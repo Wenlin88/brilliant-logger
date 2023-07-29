@@ -1,4 +1,4 @@
-# easylogging
+# brilliant-logger
 
 **Henkka's python package for making python logging easy**
 
