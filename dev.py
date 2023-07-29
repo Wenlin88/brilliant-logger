@@ -9,3 +9,4 @@ critical = logger.critical
 exception = logger.exception
 
 debug('Info')
+raise StopIteration("Max retry count achieved")
