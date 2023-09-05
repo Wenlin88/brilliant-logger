@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(name='brilliant_logger',
-      version='0.0.1',
+      version='0.0.3',
       description="Henkka's python package for making python logging easy",
-      url='https://github.com/Wenlin88/easylogging',
+      url='https://github.com/Wenlin88/brilliant-logger',
       author='Henri Wenlin',
       author_email='henri.wenlin@outlook.com',
       license='GNU GPLv3',
